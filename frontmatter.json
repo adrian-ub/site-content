@@ -1,0 +1,234 @@
+{
+  "$schema": "https://beta.frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.experimental": true,
+  "frontMatter.git.enabled": true,
+  "frontMatter.git.actions": true,
+  "frontMatter.git.submodule.push": true,
+  "frontMatter.git.submodule.pull": true,
+  "frontMatter.git.submodule.branch": "main",
+  "frontMatter.git.submodule.folder": ".frontmatter",
+  "frontMatter.dashboard.content.pagination": true,
+  "frontMatter.content.autoUpdateDate": false,
+  "frontMatter.content.fmHighlight": false,
+  "frontMatter.content.wysiwyg": true,
+  "frontMatter.content.supportedFileTypes": ["md", "mdx", "mdoc"],
+  "frontMatter.data.files": [
+    {
+      "id": "authors",
+      "title": "Authors",
+      "file": "[[workspace]]/.frontmatter/database/authors.json",
+      "labelField": "name",
+      "schema": {
+        "title": "Author",
+        "type": "object",
+        "required": ["slug", "name", "avatar"],
+        "properties": {
+          "slug": {
+            "title": "slug",
+            "type": "string"
+          },
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "twitter": {
+            "title": "twitter",
+            "type": "string"
+          },
+          "avatar": {
+            "title": "avatar",
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": true,
+      "previewPath": null,
+      "fileType": "mdoc",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "publishDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Authors",
+          "name": "authors",
+          "type": "dataFile",
+          "dataFileId": "authors",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "name": "experiences",
+      "pageBundle": true,
+      "previewPath": null,
+      "fileType": "mdoc",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Link",
+          "name": "link",
+          "type": "string"
+        },
+        {
+          "title": "Company",
+          "name": "company",
+          "type": "string"
+        },
+        {
+          "title": "Location",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Start date",
+          "name": "startDate",
+          "type": "datetime"
+        },
+        {
+          "title": "End date",
+          "name": "endDate",
+          "type": "datetime",
+          "required": false
+        },
+        {
+          "title": "skills",
+          "name": "skills",
+          "type": "tags"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "educations",
+      "pageBundle": true,
+      "previewPath": null,
+      "fileType": "mdoc",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "School",
+          "name": "school",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "End date",
+          "name": "endDate",
+          "type": "datetime",
+          "required": false
+        },
+        {
+          "title": "skills",
+          "name": "skills",
+          "type": "tags"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/.frontmatter/content/posts",
+      "previewPath": "/blog/",
+      "filePrefix": ""
+    },
+    {
+      "title": "experiences",
+      "path": "[[workspace]]/.frontmatter/content/experiences",
+      "previewPath": "/experiences/",
+      "filePrefix": ""
+    },
+    {
+      "title": "educations",
+      "path": "[[workspace]]/.frontmatter/content/educations",
+      "previewPath": "/educations/",
+      "filePrefix": ""
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "AWS",
+    "Angular",
+    "Azure Devops",
+    "CI/CD",
+    "Digital Ocean",
+    "Docker",
+    "GCP",
+    "GitLab",
+    "Java",
+    "Jest",
+    "Kubernetes",
+    "Laravel",
+    "MSW",
+    "Microfront",
+    "NgRx",
+    "Nginx",
+    "Nrwl/Nx",
+    "Storybook"
+  ],
+  "frontMatter.taxonomy.categories": []
+}
