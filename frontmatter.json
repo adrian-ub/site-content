@@ -202,7 +202,7 @@
     }
   ],
   "frontMatter.framework.id": "astro",
-  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.publicFolder": "[[workspace]]/.frontmatter/assets",
   "frontMatter.preview.host": "http://localhost:3000",
   "frontMatter.content.pageFolders": [
     {
