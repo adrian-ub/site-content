@@ -19,38 +19,35 @@
       "script": "./scripts/social-post-img.cjs"
     }
   ],
-  "frontMatter.data.files": [
-    {
-      "id": "authors",
-      "title": "Authors",
-      "file": "[[workspace]]/.frontmatter/database/authors.json",
-      "labelField": "name",
-      "schema": {
-        "title": "Author",
-        "type": "object",
-        "required": ["slug", "name", "avatar"],
-        "properties": {
-          "slug": {
-            "title": "slug",
-            "type": "string"
-          },
-          "name": {
-            "title": "name",
-            "type": "string"
-          },
-          "twitter": {
-            "title": "twitter",
-            "type": "string"
-          },
-          "avatar": {
-            "title": "avatar",
-            "type": "string"
-          }
-        }
-      }
-    }
-  ],
   "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "authors",
+      "pageBundle": true,
+      "previewPath": null,
+      "fileType": "mdoc",
+      "fields": [
+        {
+          "title": "Name",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "title": "Avatar",
+          "name": "avatar",
+          "type": "string"
+        },
+        {
+          "title": "Twitter",
+          "name": "twitter",
+          "type": "string"
+        },
+        {
+          "title": "Github",
+          "name": "github",
+          "type": "string"
+        }
+      ]
+    },
     {
       "name": "default",
       "pageBundle": true,
@@ -99,10 +96,10 @@
         {
           "title": "Authors",
           "name": "authors",
-          "type": "dataFile",
-          "dataFileId": "authors",
-          "dataFileKey": "slug",
-          "dataFileValue": "name",
+          "type": "contentRelationship",
+          "contentTypeName": "authors",
+          "contentTypeValue": "slug",
+          "required": true,
           "multiple": true
         }
       ]
@@ -221,6 +218,12 @@
       "title": "educations",
       "path": "[[workspace]]/.frontmatter/content/educations",
       "previewPath": "/educations/",
+      "filePrefix": ""
+    },
+    {
+      "title": "authors",
+      "path": "[[workspace]]/.frontmatter/content/authors",
+      "previewPath": "/authors/",
       "filePrefix": ""
     }
   ],
