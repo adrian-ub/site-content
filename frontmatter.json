@@ -49,7 +49,7 @@
       ]
     },
     {
-      "name": "default",
+      "name": "posts",
       "pageBundle": true,
       "previewPath": null,
       "fileType": "mdoc",
